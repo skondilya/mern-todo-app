@@ -13,7 +13,7 @@ class App extends React.Component {
       <Router>
         <div className="container">
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
-              <a class="navbar-brand" href="https://reactjs.org">
+              <a className="navbar-brand" href="https://reactjs.org">
               </a>
               <Link to="/" className="navbar-brand">MERN-Stack Todo App</Link>
               <div className="collpase navbar-collapse">
