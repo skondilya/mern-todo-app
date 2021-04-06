@@ -74,6 +74,11 @@ todoRoutes.route('/add').post(function(req, res) {
 
 app.use('/todos', todoRoutes);
 
+// If no API routes are hit, send the React app
+todoRoutes.use(function(req, res) {
+    res.sendFile(path.join(__dirname, '../public/build/index.html'));
+});
+
 app.listen(PORT, function() {
     console.log("Server is running on Port: " + PORT);
 });
