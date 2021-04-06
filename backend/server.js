@@ -5,6 +5,8 @@ const cors = require('cors');
 const mongoose = require('mongoose');
 const todoRoutes = express.Router();
 
+const PORT = process.env.PORT || 4000;
+
 const dotenv = require('dotenv');
 const config = require('./config');
 
@@ -72,6 +74,6 @@ todoRoutes.route('/add').post(function(req, res) {
 
 app.use('/todos', todoRoutes);
 
-app.listen(4000, function() {
+app.listen(PORT, function() {
     console.log("Server is running on Port: " + PORT);
 });

@@ -53,7 +53,7 @@ export default class CreateTodo extends Component {
             todo_completed: this.state.todo_completed
         }
         console.log("add todos post made");
-        axios.post('http://localhost:4000/todos/add', newTodo)
+        axios.post('/todos/add', newTodo)
             .then(res => console.log(res.data));
         console.log("add todos post done");
 
