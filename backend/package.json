@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
+    "scripts": {
     "start": "node server.js"
  },
   "keywords": [],
@@ -18,5 +18,5 @@
   },
   "engines": {
         "node": "14.15"
-  }
+  } 
 }
