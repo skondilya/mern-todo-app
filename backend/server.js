@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
+const path = require('path');
 const cors = require('cors');
 const mongoose = require('mongoose');
 const todoRoutes = express.Router();
@@ -73,6 +74,13 @@ todoRoutes.route('/add').post(function(req, res) {
 });
 
 app.use('/todos', todoRoutes);
+
+
+//Static file declaration
+app.use(express.static(path.join(__dirname, '/build')));
+
+//build mode
+app.get('*', (req, res) => {  res.sendFile(path.join(__dirname+'/public/index.html'));})
 
 
 app.listen(PORT, function() {
